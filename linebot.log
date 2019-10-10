@@ -1,0 +1,11 @@
+2019-10-02 09:22:23,539 ERROR Exception on /log [GET]
+Traceback (most recent call last):
+  File "C:\Users\hthanh\.conda\envs\LINE\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\hthanh\.conda\envs\LINE\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\hthanh\.conda\envs\LINE\lib\site-packages\flask\app.py", line 1967, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\hthanh\.conda\envs\LINE\lib\site-packages\flask\app.py", line 2130, in make_response
+    " {rv.__class__.__name__}.".format(rv=rv)
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a list.

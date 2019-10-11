@@ -32,7 +32,7 @@ application.logger.addHandler(log_handler)
 db = SQLAlchemy(application)
 #Load model
 from models import *
-
+db.create_all()
 line_bot_api = LineBotApi(os.environ['LINE_CHANNEL_ACCESS_TOKEN'])
 handler = WebhookHandler(os.environ['LINE_CHANNEL_SECRET'])
 

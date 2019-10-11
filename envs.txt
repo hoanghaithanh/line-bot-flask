@@ -1,10 +1,5 @@
 APP_SETTINGS=config.DevelopmentConfig
-DATABASE_URL=postgresql://hhthanh:thanh123@aaaqg58q530wny.ck0rjnuikiuz.ap-northeast-1.rds.amazonaws.com:5432/bot
+DATABASE_URL=postgresql://hhthanh:thanh123@hm1lkpy0p88ljon.ck0rjnuikiuz.ap-northeast-1.rds.amazonaws.com:5432/bot
 LINE_CHANNEL_ACCESS_TOKEN=tLMgihM5cq0aUmvcF96xkN7HSg73W3ppf+v9zP8WN7/iHBMY8v7sOZYrwkJMFL30Fjcq8Y0EKKXEzb3r0HMSBt5MmxAI0zIOXsAmjUaJV8zisMX4Cn2DZz5wq5meDOaKRNZv7a9WPx9shHenohUBqgdB04t89/1O/w1cDnyilFU=
 LINE_CHANNEL_SECRET=fbe5cb8edd74b037d32317b8184a613e
-OCR_ENDPOINT=https://hhthanh.cognitiveservices.azure.com/vision/v1.0/ocr
-OCR_KEY=74dd2ff4261d409da4323230ff9e3251
-TRANSLATOR_ENDPOINT=https://api.cognitive.microsofttranslator.com/translate?api-version=3.0
-TRANSLATOR_KEY=00246600781a4772b32c8770fb3d4e53
-TRANSLATOR_TOKEN=https://api.cognitive.microsoft.com/sts/v1.0/issueToken
-FLASK_APP=C:\Users\hthanh\Desktop\workplace\Local\Stuff\Python\LineBotFlask\application.py
+FLASK_APP=/var/www/html/line-flask-bot/application.py

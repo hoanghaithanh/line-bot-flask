@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 logger.setLevel(logging.DEBUG)
 
-log_handler = RotatingFileHandler('linebot.log', maxBytes=1024, backupCount=5)
+log_handler = RotatingFileHandler('application.log', maxBytes=1024, backupCount=5)
 log_handler.setFormatter(formatter)
 
 

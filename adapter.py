@@ -14,7 +14,8 @@ sys.path.insert(0, '/home/ubuntu/.local/lib/python3.6/site-packages')
 logger.addHandler(log_handler)
 try:
 	from application import application
-	application.run()
+	if __name__ == '__main__':
+		application.run()
 except Exception as e:
 	logger.exception(e)
 	logger.info(sys.version)

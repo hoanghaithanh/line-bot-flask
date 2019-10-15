@@ -1,4 +1,4 @@
-from application import db
+from app.extentions import db
 
 
 class LineUser(db.Model):

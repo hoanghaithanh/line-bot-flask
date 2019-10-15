@@ -1,7 +1,6 @@
 from models import Language, LineUser
 import wikipedia
 
-
 def handle_command(db, line_event, command, content):
     lang_keyword = ['language', 'lang', 'ngon ngu', 'ngôn ngữ', '言語']
     support_lang = [k.symbol for k in Language.query.all()]

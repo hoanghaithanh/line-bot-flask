@@ -1,11 +1,8 @@
 from models import Language, LineUser
-from application import db
 import wikipedia
 
 
-
-
-def handle_command(line_event, command, content):
+def handle_command(db, line_event, command, content):
     lang_keyword = ['language', 'lang', 'ngon ngu', 'ngôn ngữ', '言語']
     support_lang = [k.symbol for k in Language.query.all()]
     print(support_lang)
@@ -33,7 +30,7 @@ def summary_keyword(line_event, keyword):
     return wikipedia.summary(keyword, sentences=5)
 
 
-def get_language(line_event):
+def get_language(db, line_event):
     user = LineUser.query.filter(LineUser.line_id == line_event.source.user_id).first()
     if user:
         return Language.query.filter(Language.id == user.lang_id).first().symbol

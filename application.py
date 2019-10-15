@@ -9,9 +9,7 @@ from linebot.exceptions import (
 )
 from linebot.models import (ImageMessage, MessageEvent, TextMessage,
                             TextSendMessage, FollowEvent)
-
-from app.text_command_utils import handle_command
-
+from app.text_command_utils import *
 import sys
 import os
 import wikipedia
@@ -70,7 +68,7 @@ def handle_message(line_event):
         try:
             application.logger.info(message)
             command, content = message.split(':')
-            message = handle_command(line_event, command, content)
+            message = handle_command(db, line_event, command, content)
             line_bot_api.reply_message(
                 line_event.reply_token,
                 TextSendMessage(text=message))

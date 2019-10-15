@@ -2,4 +2,3 @@ APP_SETTINGS=config.DevelopmentConfig
 DATABASE_URL=postgresql://hhthanh:thanh123@hm1lkpy0p88ljon.ck0rjnuikiuz.ap-northeast-1.rds.amazonaws.com:5432/bot
 LINE_CHANNEL_ACCESS_TOKEN=tLMgihM5cq0aUmvcF96xkN7HSg73W3ppf+v9zP8WN7/iHBMY8v7sOZYrwkJMFL30Fjcq8Y0EKKXEzb3r0HMSBt5MmxAI0zIOXsAmjUaJV8zisMX4Cn2DZz5wq5meDOaKRNZv7a9WPx9shHenohUBqgdB04t89/1O/w1cDnyilFU=
 LINE_CHANNEL_SECRET=fbe5cb8edd74b037d32317b8184a613e
-FLASK_APP=/var/www/html/line-flask-bot/application.py

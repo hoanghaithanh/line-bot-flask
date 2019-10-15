@@ -82,8 +82,11 @@ def handle_message(line_event):
 
 @application.route("/hello", methods=['GET'])
 def hello():
-    return ' '.join(k.symbol for k in Language.query.all())
-
+    try:
+        return ' '.join(k.symbol for k in Language.query.all())
+    except Exception as e:
+        application.logger.error(e)
+        application.logger.info(sys.exc_info())
 
 @application.route("/log", methods=['GET'])
 def log():

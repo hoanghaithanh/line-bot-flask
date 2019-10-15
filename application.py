@@ -10,7 +10,6 @@ from linebot.exceptions import (
 from linebot.models import (ImageMessage, MessageEvent, TextMessage,
                             TextSendMessage, FollowEvent)
 from app.text_command_utils import *
-from app.extentions import db
 import sys
 import os
 import wikipedia
@@ -27,6 +26,7 @@ log_handler.setFormatter(formatter)
 application = Flask(__name__)
 application.config.from_object(os.environ['APP_SETTINGS'])
 application.logger.addHandler(log_handler)
+
 line_bot_api = LineBotApi(os.environ['LINE_CHANNEL_ACCESS_TOKEN'])
 handler = WebhookHandler(os.environ['LINE_CHANNEL_SECRET'])
 
@@ -110,6 +110,5 @@ def reply_message(line_event, messages):
 
 if __name__ == "__main__":
     wikipedia.set_rate_limiting(True)
-    db.init_app(application)
-    db.create_all()
+
     application.run()

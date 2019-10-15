@@ -5,4 +5,3 @@ from app.extentions import db
 
 db.init_app(application)
 db.create_all()
-application.run()
